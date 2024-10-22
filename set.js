@@ -1,29 +1,19 @@
-// Tạo một Map để lưu trữ thông tin về học sinh (studentID -> tên học sinh)
-let studentMap = new Map([
-    [101, "Alice"],
-    [102, "Torress"],
-    [103, "Ronaldo"]
-]);
+// Tạo một Set từ một mảng có các phần tử trùng lặp
+let numberSet = new Set([1, 2, 3, 4, 5, 6]);
 
-// Thêm một cặp key-value mới vào Map
-studentMap.set(104, "PUBG");
+// Kiểm tra số phần tử trong Set (các phần tử trùng lặp sẽ bị loại bỏ)
+console.log(numberSet.size); // 6
 
-// Lấy giá trị tương ứng với key
-console.log(studentMap.get(102)); // Bob
+// Thêm một mảng khác vào Set
+numberSet.add([7]);
 
-// Kiểm tra số phần tử trong Map
-console.log(studentMap.size); // 4
+// Xóa một phần tử trong Set
+numberSet.delete(2);
 
-// Kiểm tra xem Map có chứa một key không
-console.log(studentMap.has(105)); // false
+// Chuyển Set về mảng
+let numberArray = [...numberSet];
+console.log(numberArray); // [1, 3, 4, 5, 6, [7, 8]]
 
-// Xóa một cặp key-value khỏi Map
-studentMap.delete(101);
-
-// Duyệt qua các cặp key-value trong Map
-for (let [studentID, name] of studentMap) {
-    console.log(`ID: ${studentID}, Name: ${name}`);
-}
-
-// Kết quả của Map sau các thao tác
-console.log(studentMap); // Map { 102 => 'Bob', 103 => 'Charlie', 104 => 'David' }
+// Kiểm tra sự tồn tại của một phần tử
+console.log(numberSet.has(3)); // true
+console.log(numberSet.has(10)); // false
