@@ -1,5 +1,5 @@
 // Tạo một Set từ một mảng có các phần tử trùng lặp
-let numberSet = new Set([1, 2, 3, 4, 4, 5, 6]);
+let numberSet = new Set([1, 2, 3, 4, 5, 6]);
 
 // Kiểm tra số phần tử trong Set (các phần tử trùng lặp sẽ bị loại bỏ)
 console.log(numberSet.size); // 6
